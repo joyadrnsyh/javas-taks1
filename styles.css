@@ -2,8 +2,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
 }
+
 
 .navbar{
     display: flex;
@@ -22,19 +23,19 @@ body{
 }
 
 .hero{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 100px 20px;    
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; */
 }
 
 
 .searchBar input{
     margin-top: 20px;
-    width: 300px;
+    width: 720px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -48,22 +49,93 @@ body{
 button{
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #b21616;
+    background-color: #072f67;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
+.dropdown-items{
+    display: none;
+    position: absolute;
+    width: 82px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
 .dropdown-items a{
     background-color: #fff;
     text-decoration: none;
+    padding: 8px 16px;
     display: flex;
     flex-direction: column;
-    align-items: cent;
+    align-items: center;
 }
 
 .show{
     display: block;
 }
 
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.product-card{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
+}
+
+#productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#productList h3,p{
+    margin: 0;
+    padding: 8px;
+    text-align: left;
+}
+#productList h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    
+}
+
+.product-image{
+    width: 200px;
+    border-radius: 4px;
+}
+
+.product-image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.add-to-cart{
+    width: 100%;
+    height: 40px;
+    border-radius: 16px;
+}

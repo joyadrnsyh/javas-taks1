@@ -1,12 +1,11 @@
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("dropdown").classList.toggle("show");
 }
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
+    div = document.getElementById("dropdown");
     a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
@@ -17,3 +16,21 @@ function filterFunction() {
         }
     }
 }
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(products => {
+        const productCard = document.getElementById('productList');
+        products.forEach(product => {
+            productCard.innerHTML += `
+
+            <div class="product-card">
+                <img src="${product.image}" alt="${product.name}" class="product-image">
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <p class="product-price">$${product.price.toFixed(2)}</p>
+                <button class="add-to-cart">Add to Cart</button>    
+            </div>
+            `;
+        });
+    });
