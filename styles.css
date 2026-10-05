@@ -23,20 +23,20 @@ body{
 }
 
 .hero{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 100px 20px;    
-    background-color: #e0e0e0; */
+    background-color: #e0e0e0;
 }
 
 
 .searchBar input{
     margin-top: 20px;
     width: 720px;
-    padding: 10px;
+    padding: 16px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -48,12 +48,18 @@ body{
 
 button{
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 16px;
     background-color: #072f67;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
+}
+
+button:hover{
+    background-color: #ef00cb;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-items{
@@ -128,6 +134,11 @@ button{
     border-radius: 4px;
 }
 
+.product-price{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff8000;
+}
 .product-image img{
     width: 100%;
     height: 200px;
@@ -137,5 +148,6 @@ button{
 .add-to-cart{
     width: 100%;
     height: 40px;
+    padding: 8px;
     border-radius: 16px;
 }
